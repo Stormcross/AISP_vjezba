@@ -1,0 +1,5 @@
+﻿  StrukturaGrad.cpp
+f:\vijezba skola\strukturagrad\strukturagrad\strukturagrad.cpp(65): warning C4018: '<': signed/unsigned mismatch
+f:\vijezba skola\strukturagrad\strukturagrad\strukturagrad.cpp(76): warning C4018: '<': signed/unsigned mismatch
+f:\vijezba skola\strukturagrad\strukturagrad\strukturagrad.cpp(81): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  StrukturaGrad.vcxproj -> F:\Vijezba skola\StrukturaGrad\Debug\StrukturaGrad.exe
