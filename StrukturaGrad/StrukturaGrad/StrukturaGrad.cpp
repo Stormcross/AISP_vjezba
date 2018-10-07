@@ -29,10 +29,15 @@ int main()
 	system("cls");
 	upis(x);
 	ispisGradova();
-	cout << "\nOd kojeg grada vas zanima temperatura: "; string naziv; cin >> naziv;
-	cout << "U " << naziv << " je " << temperaturaGrad(naziv) << " stupnjeva!";
+	cout << "\nOd kojeg grada vas zanima temperatura, unesite ime: "; string naziv; cin >> naziv;
+	cout << "U " << naziv << " je " << temperaturaGrad(naziv) << " stupnjeva!"<<endl<<endl;
+	system("pause");
+	system("cls");
+	cout << "\nUnesite raspon broj stanovnika za provijeru koliko gradova je u tom rasponu: "; int dolje = 0, gore = 0;
+	cout << "\nDonja granica = "; cin >> dolje;
+	cout << "Gornja granica = "; cin >> gore;
+	cout << endl << "U rasponu broja stanovnika od " << dolje << " do " << gore << " imamo " << gradOd_Do(dolje, gore) << " grad/gradova.\n"; 
 	
-
 
 	cout << endl;
 	system("pause");
@@ -72,7 +77,7 @@ void ispisGradova()
 
 int temperaturaGrad(string nazivGrad)
 {
-	int temp=0;
+	double temp=0;
 	for (int i = 0; i < info.size(); i++)
 	{
 		grad g = (grad)info.at(i);
@@ -85,3 +90,24 @@ int temperaturaGrad(string nazivGrad)
 	return temp;
 }
 
+int gradOd_Do(int dolje, int gore)
+{
+	
+	int br = 0;
+	for (int i = 0; i < info.size(); i++)
+	{
+		grad g = (grad)info.at(i);
+		if (g.brojStanovnika>=dolje && g.brojStanovnika<=gore)
+		{
+			br++;
+		}
+	}
+
+	return br;
+
+}
+
+int brisiGrad(char slovo)
+{
+
+}

@@ -1,0 +1,3 @@
+﻿  StrukturaGrad.cpp
+f:\git\vijezba skola\aisp_vjezba\strukturagrad\strukturagrad\strukturagrad.cpp(90): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  StrukturaGrad.vcxproj -> F:\GIT\Vijezba skola\AISP_vjezba\StrukturaGrad\x64\Debug\StrukturaGrad.exe
