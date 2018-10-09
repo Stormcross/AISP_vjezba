@@ -29,14 +29,28 @@ int main()
 	system("cls");
 	upis(x);
 	ispisGradova();
+	//temperatura
 	cout << "\nOd kojeg grada vas zanima temperatura, unesite ime: "; string naziv; cin >> naziv;
 	cout << "U " << naziv << " je " << temperaturaGrad(naziv) << " stupnjeva!"<<endl<<endl;
 	system("pause");
 	system("cls");
+	//raspon stanovnika
 	cout << "\nUnesite raspon broj stanovnika za provijeru koliko gradova je u tom rasponu: "; int dolje = 0, gore = 0;
 	cout << "\nDonja granica = "; cin >> dolje;
 	cout << "Gornja granica = "; cin >> gore;
-	cout << endl << "U rasponu broja stanovnika od " << dolje << " do " << gore << " imamo " << gradOd_Do(dolje, gore) << " grad/gradova.\n"; 
+	cout << endl << "U rasponu broja stanovnika od " << dolje << " do " << gore << " imamo " << gradOd_Do(dolje, gore) << " grad/gradova.\n";
+	cout << endl;
+	system("pause");
+	//brisi grad sa slovom
+	system("cls");
+	char slovo;
+	cout << "Izbrisi gradove koji pocinju s slovom: "; cin >> slovo;
+	cout << "\nObrisano je " << brisiGrad(slovo) << " gradova\n" << endl;
+	cout << "Ostali gradovi:\n";
+	ispisGradova();
+	system("pause");	
+	traziGrad();
+	
 	
 
 	cout << endl;
@@ -45,7 +59,7 @@ int main()
 }
 
 //ispisivanje funkcija
-
+//upis gradova
 void upis(int x)
 {
 	int br = 1;
@@ -62,7 +76,7 @@ void upis(int x)
 	}
 	
 }
-
+//ispis
 void ispisGradova()
 {
 	system("cls");
@@ -74,7 +88,7 @@ void ispisGradova()
 		br++;
 	}
 }
-
+//temp grada
 int temperaturaGrad(string nazivGrad)
 {
 	double temp=0;
@@ -89,7 +103,7 @@ int temperaturaGrad(string nazivGrad)
 	}
 	return temp;
 }
-
+//populacija
 int gradOd_Do(int dolje, int gore)
 {
 	
@@ -106,8 +120,44 @@ int gradOd_Do(int dolje, int gore)
 	return br;
 
 }
-
+//brisi grad po slovu
 int brisiGrad(char slovo)
 {
+	int br = 0;
+	for (int i = 0; i < info.size(); i++)
+	{
+		grad A = (grad)info.at(i);
+		char bris = A.nazivGrad[0];
+		if (bris == slovo)
+		{
+			info.erase(info.begin() + i);
+			br++;
+		}
+		
 
+	}
+
+	return br;
+	
+}
+//max temp min populacija
+void traziGrad()
+{
+	double maxtemp = 0;
+	grad GminPop = (grad)info.at(0);
+	int minPop = GminPop.brojStanovnika;
+	string GRAD;
+	for (int i = 0; i < info.size(); i++)
+	{
+		grad A = (grad)info.at(i);
+		if (A.temperatura >= maxtemp && A.brojStanovnika <= minPop)
+		{
+			maxtemp = A.temperatura;
+			minPop = A.brojStanovnika;
+			GRAD = A.nazivGrad;
+		}
+	}
+	cout << endl << "Grad s najvisom temp od " << maxtemp
+		<< " i s najmanjim brojem stanovnika od " << minPop
+		<< " je " << GRAD << endl;
 }
