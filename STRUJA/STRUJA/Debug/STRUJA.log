@@ -1,0 +1,6 @@
+﻿  strujaFunk.cpp
+f:\vijezba skola\struja\struja\strujafunk.cpp(48): warning C4018: '>': signed/unsigned mismatch
+f:\vijezba skola\struja\struja\strujafunk.cpp(82): warning C4018: '<': signed/unsigned mismatch
+f:\vijezba skola\struja\struja\strujafunk.cpp(98): warning C4018: '<': signed/unsigned mismatch
+f:\vijezba skola\struja\struja\strujafunk.cpp(107): warning C4018: '<': signed/unsigned mismatch
+  STRUJA.vcxproj -> F:\Vijezba skola\STRUJA\Debug\STRUJA.exe
