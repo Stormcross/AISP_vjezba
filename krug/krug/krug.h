@@ -25,3 +25,4 @@ public:
 	~krug(); //dekontruktor
 };
 
+
