@@ -4,10 +4,16 @@
 //vektor ce sadrzavati info o studentima
 vector<student>vec;
 void upisStudenta();
+void ispisStudenata();
 
 int main()
 {
+	for (int i = 0; i < 3; i++)
+	{
+		upisStudenta();
+	}
 	
+	ispisStudenata();
 
 
 	cout << endl;
@@ -32,4 +38,14 @@ void upisStudenta()
 	//upis objekta u vektor
 	vec.push_back(stud);
 
+}
+
+void ispisStudenata()
+{
+	cout << endl << "***Popis studenata***" << endl;
+	for (int i = 0; i < vec.size(); i++)
+	{
+		student stud = (student)vec.at(i);
+		stud.ispis();
+	}
 }

@@ -17,6 +17,7 @@ public:
 	string getImePrezime() const;
 	void setGodinaStudija(int godina);
 	int getGodinaStudija() const;
-
+	
+	void ispis();
 };
 

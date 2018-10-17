@@ -33,3 +33,10 @@ void student::setGodinaStudija(int godina)
 	godinaStudija = godina;
 }
 
+void student::ispis()
+{
+	cout << endl << "Student: " << imePrezime << endl;
+	cout << "Godina studija: " << godinaStudija << endl;
+	cout << "********************************************" << endl;
+}
+
